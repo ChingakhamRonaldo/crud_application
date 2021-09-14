@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import { Route, Switch } from 'react-router';
+import AddUser from './components/AddUser';
+import Home from './components/Home';
+import About from './components/About';
+import NavBar from './components/NavBar';
+import Contact from './components/Contact';
+import * as urlCont from './helper/constant'
+import EditUser from './components/EditUser';
+import ViewUser from './components/ViewUser';
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <NavBar />
+
+      <Switch>
+        <Route exact path={urlCont.HOME} component={Home} />
+        <Route exact path={urlCont.ADDUSER} component={AddUser} />
+        <Route exact path={urlCont.ABOUT} component={About} />
+        <Route exact path={urlCont.CONTACT} component={Contact} />
+        <Route exact path='/edit/:id' component={EditUser} />
+        <Route exact path='/viewUser/:id' component={ViewUser} />
+      </Switch>
+    </>
+  )
 }
 
 export default App;

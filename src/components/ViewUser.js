@@ -1,0 +1,70 @@
+import React from 'react'
+import { useState, useEffect } from 'react';
+import axios from 'axios';
+import { useParams } from 'react-router';
+import { TableBody, TableCell, TableRow } from '@material-ui/core';
+import { makeStyles } from '@material-ui/styles';
+
+const useStyle = makeStyles({
+    Tab: {
+        width: '50%',
+
+
+    }
+})
+
+
+
+const ViewUser = () => {
+
+    const classes = useStyle();
+
+    const [user, setUser] = useState({
+        name: "",
+        username: "",
+        email: "",
+        phone: "",
+        website: ""
+    })
+
+    const { name, username, email, phone, website } = user;
+
+    useEffect(() => {
+        loadUser()
+    }, [])
+
+    const loadUser = async () => {
+        const result = await axios.get(`http://localhost:3004/users/${id}`);
+        setUser(result.data);
+    }
+
+    const { id } = useParams();
+    return (
+        <>
+            <TableBody >
+                <TableRow>
+                    <TableCell className={classes.Tab}>Sl.no :-{id}</TableCell>
+                </TableRow>
+                <TableRow>
+                    <TableCell>NAME :-{name}</TableCell>
+                </TableRow>
+                <TableRow>
+                    <TableCell>USERNAME :-{username}</TableCell>
+                </TableRow>
+                <TableRow>
+                    <TableCell>EMAIL :-{email}</TableCell>
+                </TableRow>
+                <TableRow>
+                    <TableCell>PHONE NO. :-{phone}</TableCell>
+                </TableRow>
+                <TableRow>
+                    <TableCell>WEBSITE :-{website}</TableCell>
+                </TableRow>
+
+            </TableBody>
+
+        </>
+    )
+}
+
+export default ViewUser

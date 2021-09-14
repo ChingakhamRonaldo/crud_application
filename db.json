@@ -1,0 +1,58 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Chingakham Ronaldo",
+      "username": "bb",
+      "email": "chingakhamronaldo321@gmail.com",
+      "address": {
+        "street": "Kulas Light",
+        "suite": "Apt. 556",
+        "city": "Gwenborough",
+        "zipcode": "92998-3874",
+        "geo": {
+          "lat": "-37.3159",
+          "lng": "81.1496"
+        }
+      },
+      "phone": "08837312293",
+      "website": "website.com",
+      "company": {
+        "name": "Romaguera-Crona",
+        "catchPhrase": "Multi-layered client-server neural-net",
+        "bs": "harness real-time e-markets"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Bonny pongsumbam",
+      "username": "da B",
+      "email": "bonnypongsumbam31@gmail.com",
+      "address": {
+        "street": "Victor Plains",
+        "suite": "Suite 879",
+        "city": "Wisokyburgh",
+        "zipcode": "90566-7771",
+        "geo": {
+          "lat": "-43.9509",
+          "lng": "-34.4618"
+        }
+      },
+      "phone": "8837358373",
+      "website": "biginer.net",
+      "company": {
+        "name": "Deckow-Crist",
+        "catchPhrase": "Proactive didactic contingency",
+        "bs": "synergize scalable supply-chains"
+      }
+    },
+    {
+      "name": "Laishram Amarnath Singh",
+      "username": "Amar",
+      "email": "laishrambam12@gmail.com",
+      "phone": "6009591538",
+      "website": "merndevloper.com",
+      "id": 3
+    }
+  ]
+}
