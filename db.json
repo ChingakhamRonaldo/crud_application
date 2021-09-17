@@ -3,7 +3,7 @@
     {
       "id": 1,
       "name": "Chingakham Ronaldo",
-      "username": "bb",
+      "username": "Cr7",
       "email": "chingakhamronaldo321@gmail.com",
       "address": {
         "street": "Kulas Light",
@@ -45,14 +45,6 @@
         "catchPhrase": "Proactive didactic contingency",
         "bs": "synergize scalable supply-chains"
       }
-    },
-    {
-      "name": "Laishram Amarnath Singh",
-      "username": "Amar",
-      "email": "laishrambam12@gmail.com",
-      "phone": "6009591538",
-      "website": "merndevloper.com",
-      "id": 3
     }
   ]
 }

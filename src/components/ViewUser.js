@@ -2,20 +2,25 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useParams } from 'react-router';
-import { TableBody, TableCell, TableRow } from '@material-ui/core';
+import { TableBody, TableCell, TableRow, Typography } from '@material-ui/core';
 import { makeStyles } from '@material-ui/styles';
 
-const useStyle = makeStyles({
-    Tab: {
-        width: '50%',
 
-
-    }
-})
 
 
 
 const ViewUser = () => {
+
+
+    const useStyle = makeStyles({
+        table: {
+            width: '33%',
+            margin: 'auto',
+            paddingLeft: '100px',
+            marginTop: '20px'
+
+        }
+    })
 
     const classes = useStyle();
 
@@ -38,12 +43,16 @@ const ViewUser = () => {
         setUser(result.data);
     }
 
+
     const { id } = useParams();
     return (
-        <>
-            <TableBody >
+        <div className={classes.table}>
+            <Typography variant="h4">
+                User Data
+            </Typography>
+            <TableBody>
                 <TableRow>
-                    <TableCell className={classes.Tab}>Sl.no :-{id}</TableCell>
+                    <TableCell >Sl.no :-{id}</TableCell>
                 </TableRow>
                 <TableRow>
                     <TableCell>NAME :-{name}</TableCell>
@@ -63,7 +72,7 @@ const ViewUser = () => {
 
             </TableBody>
 
-        </>
+        </div>
     )
 }
 

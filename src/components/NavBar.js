@@ -33,14 +33,7 @@ const NavBar = () => {
                 console.log("Add User Click")
                 history.push(urlCont.ADDUSER)
                 break;
-            case "about":
-                console.log("About Click")
-                history.push(urlCont.ABOUT)
-                break;
-            case "contact":
-                console.log("Contact Click")
-                history.push(urlCont.CONTACT)
-                break;
+
             default:
                 break;
         }
@@ -59,7 +52,7 @@ const NavBar = () => {
                         className={classes.tabs}
                         onClick={() => handleButton("home")}
                     >
-                        Curd Application
+                      Show User
                     </Typography>
 
                     <Typography
@@ -69,19 +62,6 @@ const NavBar = () => {
                         Add User
                     </Typography>
 
-                    <Typography
-                        className={classes.tabs}
-                        onClick={() => handleButton("about")}
-                    >
-                        About
-                    </Typography>
-
-                    <Typography
-                        className={classes.tabs}
-                        onClick={() => handleButton("contact")}
-                    >
-                        Contact
-                    </Typography>
 
 
 

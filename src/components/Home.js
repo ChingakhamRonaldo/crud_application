@@ -12,15 +12,25 @@ const Home = () => {
     const [users, setUsers] = useState([]);
 
 
-    const useStyle = makeStyles({
-        row: {
-            '& > *': {
-                fontSize: 15,
-
-            }
+ 
+const useStyle = makeStyles({
+    table: {
+        width: '90%',
+        margin: '50px 0 0 50px'
+    },
+    thead: {
+        '& > *': {
+            background: '#0E0844 ',
+            color: '#EBEAF4 ',
+            fontSize: 15
         }
-
-    })
+    },
+    row: {
+        '& > *': {
+            fontSize: 15
+        }
+    }
+})
 
     const classes = useStyle();
 
@@ -42,9 +52,9 @@ const Home = () => {
 
     return (
         <>
-            <Table>
+            <Table className={classes.table}>
                 <TableHead >
-                    <TableRow>
+                    <TableRow className={classes.thead}>
                         <TableCell> Id </TableCell>
                         <TableCell> Name </TableCell>
                         <TableCell> User Name </TableCell>
